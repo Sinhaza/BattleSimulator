@@ -1,0 +1,37 @@
+<?php
+
+
+namespace App\Traits;
+
+trait ThrowsDice
+{
+    protected static function ThrowD6(): int
+    {
+        return rand(1, 6);
+    }
+
+    protected static function ThrowD8(): int
+    {
+        return rand(1, 8);
+    }
+
+    protected static function ThrowD10(): int
+    {
+        return rand(1, 10);
+    }
+
+    protected static function ThrowD12(): int
+    {
+        return rand(1, 12);
+    }
+
+    protected static function ThrowD20(): int
+    {
+        return rand(1, 20);
+    }
+
+    protected static function ThrowAbilityScore(): int
+    {
+        return self::ThrowD6() + self::ThrowD6() + self::ThrowD6();
+    }
+}
