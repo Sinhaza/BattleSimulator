@@ -20,21 +20,21 @@ class Attributes
 
     public function addAvailablePoints(int $points): Attributes
     {
-        $rawData = $this->collection->all();
+        $data = $this->collection->all();
 
-        $rawData['unassigned'] += $points;
+        $data['unassigned'] += $points;
 
-        return new static($rawData);
+        return new static($data);
     }
 
     public function assignAvailablePoint(string $attribute): Attributes
     {
-        $rawData = $this->collection->all();
+        $data = $this->collection->all();
 
-        $rawData['unassigned']--;
-        $rawData[$attribute]++;
+        $data['unassigned']--;
+        $data[$attribute]++;
 
-        return new static($rawData);
+        return new static($data);
     }
 
     public function hasAvailablePoints(): bool

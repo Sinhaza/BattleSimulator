@@ -61,11 +61,6 @@ class Character extends Model
         return $this->type === CharacterType::PLAYER;
     }
 
-    public function isMerchant(): bool
-    {
-        return $this->type === CharacterType::MERCHANT;
-    }
-
     public function isMonster(): bool
     {
         return $this->type === CharacterType::MONSTER;
