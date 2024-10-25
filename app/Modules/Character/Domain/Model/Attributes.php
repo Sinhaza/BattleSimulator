@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Modules\Character\Domain;
+namespace App\Modules\Character\Domain\Model;
 
 
 use Illuminate\Support\Collection;

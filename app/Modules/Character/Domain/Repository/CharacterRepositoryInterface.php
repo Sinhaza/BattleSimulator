@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\Character\Application\Interfaces;
+namespace App\Modules\Character\Domain\Repository;
 
-use App\Modules\Character\Domain\Character;
+use App\Modules\Character\Domain\Model\Character;
 
 interface CharacterRepositoryInterface
 {
