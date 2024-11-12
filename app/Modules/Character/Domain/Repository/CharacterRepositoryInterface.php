@@ -6,9 +6,13 @@ use App\Modules\Character\Domain\Model\Character;
 
 interface CharacterRepositoryInterface
 {
-    public function add(Character $character): void;
+    public function findAll(): array;
 
-    public function get(CharacterId $characterId): Character;
+    public function findById(string $characterId): Character;
+
+    public function store(Character $character): Character;
 
     public function update(Character $character): void;
+
+    public function delete(string $characterId): void;
 }

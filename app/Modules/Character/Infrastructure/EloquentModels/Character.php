@@ -5,14 +5,52 @@ namespace App\Modules\Character\Infrastructure\EloquentModels;
 use App\Modules\Character\Domain\Model\Attributes;
 use App\Modules\Character\Domain\Model\CharacterType;
 use App\Traits\ThrowsDice;
-use Illuminate\Database\Eloquent\Model;
 
-class Character extends Model
+
+class Character
 {
-
     use ThrowsDice;
 
-    private Attributes $attributes;
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var CharacterType
+     */
+    private $type;
+
+    /**
+     * @var int
+     */
+    private $level;
+
+    /**
+     * @var int
+     */
+    private $raceId;
+
+    /**
+     * @var Attributes
+     */
+    private $attributes;
+
+    /**
+     * @var HitPoints
+     */
+    private $hitPoints;
+
+    /**
+     * @var Statistics
+     */
+    private $statistics;
+
+    /**
+     * @var Inventory
+     */
+    private $inventory;
+
 
     protected $guarded = [];
 
